@@ -1,0 +1,24 @@
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">入力</h3>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool"></button>
+      </div>
+    </div>
+    <div class="card-body">
+      <form action="#" th:object="form">
+        <div class="form-group">
+          <label for="name">名前</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="question_0">質問文</label>
+          <input type="text" class="form-control" th:each="i : ${#numbers.sequence(0, 9)}" th:id="question_${i}">
+        </div>
+        <div class="form-group">
+          <label for="answer">質問文</label>
+          <textarea id="answer" class="form-control" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
